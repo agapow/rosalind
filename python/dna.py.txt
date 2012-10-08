@@ -1,0 +1,27 @@
+..  #!/usr/bin/env python
+  
+Exercise DNA
+============
+
+Calculate base frequency over a DNA string
+
+The data is a raw string in a file, so reading it in is simple.
+
+::
+
+  in_hndl = open ('../data/rosalind_dna.txt', 'r')
+  s = in_hndl.read()
+  
+There's many ways this could be done, but I've settled for the simple builtin
+solution of using the string count function. For very long strings, it may be
+worth using a dict and accumulating function along the string.
+
+::
+
+  result = ' '.join ([s.count(c) for c in 'ACGT']
+  
+Now just print the result. Note the results have to be printed out in a given order.
+
+::
+
+  print result
